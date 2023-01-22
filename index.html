@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Book Management System</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library Management System</title>
+    <!-- <script src="js/data.js"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header>
+        Vartika Library
+    </header>
+    <section class="backimg">
+        <!--  Vertical Nav Bar-->
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" onclick="showAddBooks()">Add Book</a> 
+                    </li>
+                    <li>
+                        <a href="#" onclick="showUpdateBooks()">Update Book</a> 
+                        
+                    </li>
+                    <li>
+                        <a href="#" onclick="showDeleteBooks()">Delete Book</a>
+                    </li>
+                    <li>
+                        <a onclick="showBooks()">List All Books</a> 
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Add Book Content-->
+        <section class="add-book book-content ">
+            <h2 class="category-header">Add Book</h2>
+            <hr>
+            <form action="#" class="add-book-form" onsubmit=" return addBook()">
+                <span tooltip="Enter Book id between 1 and 10000" flow="right">
+                    <input type="number" name="bookid" placeholder="BookId"  max="10000"  min="1" required>
+                </span>
+                <br>
+                <span tooltip="Enter Bookname with 3-30 characters" flow="right">
+                    <input type="text" name="bookname" placeholder="Book Name" minlength="3" maxlength="30" required> 
+                </span> 
+                <br>
+                <span tooltip="Enter Author's name with 3-30 characters" flow="right">
+                    <input type="text" name="author" placeholder="Author" minlength="3" maxlength="30" required>
+                </span> 
+                <br>
+                <span tooltip="Enter Author's name with 3-30 characters" flow="right">
+                    <input type="text" name="publisher" placeholder="Publisher" required>
+                </span> 
+                <br>
+                <span tooltip="Publish Year should be between 1900 and 2020" flow="right">
+                    <input type="number" name="publishyear" placeholder="Year of Publishing" min="1900" max="2020" required>
+                </span> 
+                <br>
+                <button type="submit">Add Book</button> <button>Reset</button>
+            </form>
+        </section>
+
+        <!-- Update Book Content -->
+        <section class = "update-book book-content">
+            <h2 class="category-header"> Update Book</h2>
+            <hr>
+            <form action="#" class="update-book-form" onsubmit="return updateBook()">
+                <!-- <span tooltip="Enter Book id between 1 and 10000" flow="right">
+                    <input type="number" name="bookid" placeholder="BookId"  max="10000"  min="1">
+                </span> -->
+                <label for="bookidselect"> BookID:</label>
+                <select name="" id="bookidselect" onchange="updateBookIdChange()"></select>
+                <br>
+                <span tooltip="Enter Bookname with 3-30 characters" flow="right">
+                    <input type="text" name="updatebookname" placeholder="Book Name" minlength="3" maxlength="30"> 
+                </span> 
+                <br>
+                <span tooltip="Enter Author's name with 3-30 characters" flow="right">
+                    <input type="text" name="updateauthor" placeholder="Author" minlength="3" maxlength="30">
+                </span> 
+                <br>
+                <span tooltip="Enter Author's name with 3-30 characters" flow="right">
+                    <input type="text" name="updatepublisher" placeholder="Publisher">
+                </span> 
+                <br>
+                <span tooltip="Publish Year should be between 1900 and 2020" flow="right">
+                    <input type="number" name="updatepublishyear" placeholder="Year of Publishing" min="1900" max="2020">
+                </span> 
+                <br>
+                <button type="submit">Update Book</button>
+            </form>
+        </section>
+
+        <section class = "delete-book book-content">
+            <h2 class="category-header"> Delete Book</h2>
+            <hr>
+            <form action="#" class="delete-book-form" onsubmit="return deleteBook()">
+                <label for="deletebookidselect"> BookID:</label>
+                <select name="" id="deletebookidselect" onchange="deleteBookIdChange()"></select>
+                <br>
+                <span tooltip="Enter Bookname with 3-30 characters" flow="right">
+                    <input type="text" name="deletebookname" placeholder="Book Name" minlength="3" maxlength="30" disabled> 
+                </span> 
+                <br>
+                <span tooltip="Enter Author's name with 3-30 characters" flow="right">
+                    <input type="text" name="deleteauthor" placeholder="Author" minlength="3" maxlength="30" disabled>
+                </span> 
+                <br>
+                <span tooltip="Enter Author's name with 3-30 characters" flow="right">
+                    <input type="text" name="deletepublisher" placeholder="Publisher" disabled>
+                </span> 
+                <br>
+                <span tooltip="Publish Year should be between 1900 and 2020" flow="right">
+                    <input type="number" name="deletepublishyear" placeholder="Year of Publishing" min="1900" max="2020" disabled>
+                </span> 
+                <br>
+                <button type="submit">Delete Book</button>
+            </form>
+        </section>
+
+        <!--List Books-->
+        <section class = "list-book book-content">
+            <h2 class="category-header"> List Book</h2>
+            <hr>
+
+        </section>
+    </section>
+
+    <footer>
+        &copy; Vartika Library
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/index.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
